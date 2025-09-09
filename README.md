@@ -186,7 +186,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📞 Support
 
 - **Issues**: [GitHub Issues](https://github.com/Mitash0404/Algorithmic-Trading-Engine/issues)
-- **Email**: mitash.shah@example.com
+- **Email**: mitashshah@gmail.com
 
 ---
 
