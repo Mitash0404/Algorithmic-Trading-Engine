@@ -1,0 +1,67 @@
+# Algorithmic Trading Engine Configuration
+
+# Trading Parameters
+trading:
+  initial_capital: 1000000  # $1M initial capital
+  max_position_size: 0.1    # Max 10% in single position
+  max_leverage: 2.0         # Max 2x leverage
+  transaction_cost: 0.001   # 0.1% transaction cost
+  slippage: 0.0005          # 0.05% slippage
+
+# Cointegration Strategy Parameters
+cointegration:
+  lookback_period: 252      # 1 year of trading days
+  significance_level: 0.05  # 5% significance level
+  min_half_life: 5          # Minimum half-life in days
+  max_half_life: 252        # Maximum half-life in days
+  z_score_threshold: 2.0    # Entry threshold for mean reversion
+  exit_threshold: 0.5       # Exit threshold
+
+# Risk Management
+risk:
+  max_drawdown: 0.15        # Max 15% drawdown
+  var_confidence: 0.95      # 95% VaR confidence
+  position_sizing_method: "kelly"  # Kelly criterion
+  stop_loss: 0.05           # 5% stop loss
+  take_profit: 0.15         # 15% take profit
+
+# Data Parameters
+data:
+  symbols: ["AAPL", "MSFT", "GOOGL", "AMZN", "TSLA", "NVDA", "META", "NFLX", "AMD", "INTC"]
+  data_source: "yfinance"   # Data source
+  update_frequency: "1min"  # Data update frequency
+  history_days: 1000        # Historical data days
+
+# Performance Metrics
+performance:
+  benchmark: "SPY"          # Benchmark index
+  risk_free_rate: 0.02     # 2% risk-free rate
+  sharpe_target: 1.24      # Target Sharpe ratio
+  max_drawdown_target: 0.15 # Target max drawdown
+
+# Database Configuration
+database:
+  mongodb_uri: "mongodb://localhost:27017/"
+  redis_uri: "redis://localhost:6379/"
+  postgres_uri: "postgresql://user:password@localhost:5432/trading_db"
+
+# Interactive Brokers Configuration
+ibkr:
+  host: "127.0.0.1"
+  port: 7497
+  client_id: 1
+  timeout: 20
+  retry_attempts: 3
+
+# Logging
+logging:
+  level: "INFO"
+  file: "logs/trading_engine.log"
+  max_size: "100MB"
+  backup_count: 5
+
+# C++ Extension
+cpp_extension:
+  enabled: true
+  optimization_level: 3
+  parallel_threads: 8
